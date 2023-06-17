@@ -55,9 +55,9 @@ createUser()
 getListTareas()
 }, [])
 
-useEffect(()=>{
-updateTareas()
-}, [lista])
+// useEffect(()=>{
+// updateTareas()
+// }, [lista])
 
 
 
@@ -70,6 +70,7 @@ const confirmarTarea = (e) => {
             setLista([...lista, { "label": tarea, "done": false }])
             console.log(lista)
             setTarea("")
+            updateTareas()
         }
     }
 }
